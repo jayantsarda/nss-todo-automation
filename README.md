@@ -33,8 +33,6 @@ The goal is to use access the fake API call at http://localhost/nss-todo-automat
 Selenium Webdriver with preferably Python bindings (or any other OO language of your choice). Automate the above test cases in order to test the functional flow through of the application. In particular, we want to test options around creating a todo, assigning categories, modifying/deleting existing todos etc. The application should itself be fairly self-explanatory. Feel free to email us (qa@about.com) with any questions about it. Please use the application first to populate data for API. I would suggest create some dunny tasks.
 
 
-<h3>Bonus exercise:</h3>
-Try to use Cucumber (Or any other wholesome BDD framework). First translate the above test cases to Cucumber Gherkin code, and then automate them.
 
 <h3>Submission instructions:</h3>
 Follow the Github standard collaboration procedure. 
@@ -45,7 +43,6 @@ Follow the Github standard collaboration procedure.
 <h3>Resources:</h3>
 <ul>
 <li>API call for backend data validation: There's a fake API call that outputs JSON of the flat file at http://localhost/nss-todo-automation/fake-API-call.php </li>
-<li>Cucumber documentation: https://github.com/cucumber/cucumber/wiki </li>
 <li>Selenium documentation: http://docs.seleniumhq.org/projects/webdriver/ </li>
 </ul>
 
