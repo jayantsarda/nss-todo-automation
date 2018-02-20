@@ -1,1 +1,23 @@
-//please add your test cases here.
+1. Create new task and add
+
+2. Create task and assign category 
+
+3. Create task with due date
+
+4. Create task with all option selected
+
+5. Remove a Single task
+
+6. Remove a Multiple task
+
+7. Remove all tasks
+
+8. Complete single task 
+
+9. Complete multiple task
+
+10.Complete all task 
+
+11. Create a new category
+
+12. Create category with assigned color
