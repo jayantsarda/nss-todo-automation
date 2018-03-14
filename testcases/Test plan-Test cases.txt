@@ -1,0 +1,179 @@
+1. The Purpose of the Test Plan
+The purpose of the Test Plan is to describe the goal, approach and scope of testing activities provided while executing Test Exercise.
+
+2. Application under test
+	Application under test is a web application “NSS-TODO List”, current version - v1.1
+Application is available via the URL - http://amadeus.maclab.org/_demo/nss-todo-1.1/#
+
+3. Goals
+	The goal is to determine high priority functional  test cases, to create automated scripts and prepare API test cases for the specified scenarios
+
+4. Approach
+4.1 Functional test cases
+	Due to absence of requirements, functional test cases will be determine while exploratory testing the application under test. Positive high priority test cases will be designed and automated.
+4.2 Automated scripts
+	Automated scripts will be created using JUnit test framework
+4.3 API test cases
+	TODO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Test Cases
+1. Test case #1
+1.1 Create new task without due date and category
+1.2 Test steps
+Navigate to the home page
+Enter ‘Test task 1’ into the ‘New task name’ input field
+Click ‘Add’ button
+	1.3 Expected result - new task with ‘Test task 1’ title is displayed in the task grid followed by the ‘(None)’ as a Due date.
+
+2. Test case #2
+	2.1 Create new task with due date, without category (future date).
+	2.2 Test steps
+Navigate to the home page
+Enter ‘Test task 2.1’ into the ‘New task name’ input field
+Select due date (future) using datepicker dropdowns
+Click ‘Add’ button
+	2.3 Expected result - new task with ‘Test task 2’ title is displayed in the task grid followed by the Due date in format ‘(dd/mm/year)’
+
+2. Test case #2.1
+	2.1.1 Create new task with due date, without category (past date).
+	2.1.2 Test steps
+Navigate to the home page
+Enter ‘Test task 2’ into the ‘New task name’ input field
+Select due date (past) using datepicker dropdowns
+Click ‘Add’ button
+	2.1.3 Expected result - new task with ‘Test task 2.1’ title is displayed in the task grid followed by the Due date in format ‘(dd/mm/year)’. The task is displayed in the red color.
+
+3. Test case #3
+	3.1 Create new task with due date and category (future date)
+	3.2 Test steps
+Navigate to the home page
+Enter ‘Test task 3’ into the ‘New task name’ input field
+Select due date (future) using datepicker dropdowns
+Select category using category dropdown
+Click ‘Add’ button
+	3.3 Expected result - new task with ‘Test task 3’ title is displayed in the task grid followed by the Due date in format ‘(dd/mm/yy)’.
+The task is displayed in the color of selected category.
+
+3.1. Test case #3.1
+	3.1.1 Create new task with due date and category (past date)
+	3.1.2 Test steps
+Navigate to the home page
+Enter ‘Test task 3.1’ into the ‘New task name’ input field
+Select due date (past) using datepicker dropdowns
+Select category using category dropdown
+Click ‘Add’ button
+	3.1.3 Expected result - new task with ‘Test task 3.1’ title is displayed in the task grid followed by the Due date in format ‘(dd/mm/yy)’ and the Category in format (category) in category color.
+The task is displayed in the red color.
+
+4.Test case #4
+	4.1 Mark task as completed
+	4.2 Test steps
+Navigate to the home page
+Select ‘Test task 1’ checkbox
+Click ‘Complete’ button
+	4.3 Expected result - ‘Test task 1’ is marked as completed
+
+
+
+5.Test case #5
+	5.1 Remove task from the list
+	5.2 Test steps
+Navigate to the home page
+Select ‘Test task 2’ checkbox
+Click ‘Remove’ button
+	5.3 Expected result - ‘Test task 2’ is removed from the task grid
+
+6.Test case #6
+	6.1 Edit task
+	6.2 Test steps
+Navigate to the home page
+Click on the area to the left of the ‘Test task 6’ checkbox
+In the new window, change the task name to the ‘Test task 6 edited’
+Change the due date (note the date)
+Change the category (note the category)
+Click the ‘Update” button
+	6.3Expected result - task with ‘Test task 6 edited’ title is displayed in the task grid instead of the ‘Test task 6’, followed by the new Due date and new category 
+
+7. Test case #7
+7.1 Create new category without assigned color
+7.2 Test steps
+Navigate to the home page
+Enter ‘Test category 1’ into the ‘New category name’ input field
+Click ‘Add category’ button
+	7.3 Expected result - new category with ‘Test category 1’ title is displayed in the categories list. Category title is displayed in black color. ‘Test category 1’ is displayed in the category dropdown
+
+8. Test case #8
+8.1 Create new category with assigned color
+8.2 Test steps
+Navigate to the home page
+Enter ‘Test category 2’ into the ‘New category name’ input field
+Select color from the color dropdown (Note the color)
+Click ‘Add category’ button
+	8.3 Expected result - new category with ‘Test category 2’ title is displayed in the categories list. Category title is displayed in the selected color. ‘Test category 2’ is displayed in the category dropdown
+
+9. Test case #9
+9.1 Remove category, confirm removing
+9.2 Test steps
+Navigate to the home page
+Click the  ‘Test category 2’ name in the categories list
+Confirm removing by selecting the ‘Yes’ option in the confirm removing window
+	9.3 Expected result - ‘Test category 2’ is not displayed in the categories list. ‘Test category 2’ is not displayed in the category dropdown
+
+10. Test case #10
+10.1 Remove category, cancel confirm removing
+10.2 Test steps
+Navigate to the home page
+Click the  ‘Test category 1’ name in the categories list
+Do not confirm removing by selecting the ‘Nevermind’ option in the confirm removing window
+	10.3 Expected result - ‘Test category 1’  is displayed in the categories list. ‘Test category 1’ is displayed in the category dropdown
+
+11. Test case #11
+11.1 Toggle all option
+11.2 Test steps
+Navigate to the home page
+Select ‘Toggle all’ checkbox
+	11.3 Expected result - all of the tasks checkboxes  in the task grid are selected
+
+12. Test case #12
+12.1 Hide Advanced options
+12.2 Test steps
+Navigate to the home page
+Click the ‘Advanced’ option
+	12.3 Expected result - following fields are hidden upons selection the ‘Advanced’ option:
+Category dropdown
+Datepicker dropdowns
+New category name inputfield
+New category colorpicker
+Add category button
+	
+13. Test case #13
+13.1 Display Advanced options
+	13.2 Prerequisites - Advanced options are hidden
+13.3 Test steps
+Navigate to the home page
+Click the ‘Advanced’ option
+	13.4 Expected result - following fields are displayed upons selection the ‘Advanced’ option:
+Category dropdown
+Datepicker dropdowns
+New category name inputfield
+New category colorpicker
+Add category button
+
